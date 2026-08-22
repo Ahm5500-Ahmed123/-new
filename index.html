@@ -11,18 +11,13 @@
 
     <p>
         المملكة العربية السعودية دولة عربية اسلاميه تقع في جنوب غرب قارة آسيا،
-        
-        
-        
-    
         وتشغل معظم مساحة شبه الجزيرة العربية.
-عاصمتها الرياض،
-        وتتميز بتاريخها وثقافتها ومكانتها الدينية والاقتصادية،
-        حيث توجد فيها مكة المكرمة والمدينة المنورة واطهر البقاع على وجه الارض وهو بيت. الله الحرام.
-الجغرافيا والمساحة: تزيد عن مليوني كيلومتر مربع، وتشغل معظم شبه الجزيرة العربية.
-الحدود: يحدها البحر الأحمر غرباً، والخليج العربي وعدة دول عربية شرقاً وشمالاً وجنوباً.
-التضاريس: تتنوع بين سهول تهامة، وجبال الحجاز وعسير، وصحراء الربع الخالي.
- نظام الحكم: ملكي، والدستور هو كتاب الله وسنة رسوله محمد صلى الله عليه وسلم.
+        عاصمتها الرياض، وتتميز بتاريخها وثقافتها ومكانتها الدينية والاقتصادية،
+        حيث توجد فيها مكة المكرمة والمدينة المنورة واطهر البقاع على وجه الارض وهو بيت الله الحرام.
+        الجغرافيا والمساحة: تزيد عن مليوني كيلومتر مربع، وتشغل معظم شبه الجزيرة العربية.
+        الحدود: يحدها البحر الأحمر غرباً، والخليج العربي وعدة دول عربية شرقاً وشمالاً وجنوباً.
+        التضاريس: تتنوع بين سهول تهامة، وجبال الحجاز وعسير، وصحراء الربع الخالي.
+        نظام الحكم: ملكي، والدستور هو كتاب الله وسنة رسوله محمد صلى الله عليه وسلم.
     </p> 
 
     <h2>علم المملكة العربية السعودية</h2>
@@ -37,20 +32,14 @@
          alt="خريطة المملكة العربية السعودية"
          width="300">
 
-    <a href="https://ar.wikipedia.org/wiki/السعودية" target="_blank">
+    <p>
+      <a href="https://ar.wikipedia.org/wiki/السعودية" target="_blank">
         ويكيبيديا - المملكة العربية السعودية
-        
-        
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>People Information</title>
-</head>
+      </a>
+    </p>
 
-<body>
-
-    <h1>People Information</h1>
+    <!-- فصلت هنا قسم People Information ليصبح مستقلاً -->
+    <h2>People Information</h2>
 
     <label>Name:</label>
     <input type="text" id="name"><br><br>
@@ -69,22 +58,38 @@
 
     <br><br>
 
-    <button onclick="addPerson()">Ok
-    </button>
+    <button onclick="addPerson()">Ok</button>
 
-    
-        
-    </a><h2>Account Information</h2>
+    <h2>Account Information</h2>
 
-Email:
-<input type="text" id="email">
+    Email:
+    <input type="text" id="email">
 
-<br><br>
+    <br><br>
 
-Password:
-<input type="password" id="password">
+    Password:
+    <input type="password" id="password">
 
-<br><br>
+    <br><br>
 
-<button onclick="addAccount()">تم</button>
+    <button onclick="addAccount()">تم</button>
 
+    <script>
+      // وظائف بسيطة لتفادي أخطاء عند الضغط على الأزرار
+      function addPerson() {
+        const name = document.getElementById('name').value;
+        const age = document.getElementById('age').value;
+        const residence = document.getElementById('residence').value;
+        const gender = document.getElementById('gender').value;
+        alert('Person:\nName: ' + name + '\nAge: ' + age + '\nResidence: ' + residence + '\nGender: ' + gender);
+      }
+
+      function addAccount() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        alert('Account:\nEmail: ' + email + '\nPassword length: ' + password.length);
+      }
+    </script>
+
+</body>
+</html>
